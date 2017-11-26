@@ -17,13 +17,14 @@ img{
 }
 
 .bookCard{
-    flex: 1;
+    flex: 2;
 }
 
 mat-card-content.bookCard{
+    flex: 3;
     display: flex;
 }
 
 mat-card-content.bookCard div{
-    margin: auto;
+    margin: auto 0 ;
 }
