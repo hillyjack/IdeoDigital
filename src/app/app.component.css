@@ -1,0 +1,29 @@
+
+
+.example-spacer{
+    flex: 1 1 auto;
+}
+
+img{
+    display: block;
+    height:300px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.booksContainer{
+    display: flex;
+    padding-bottom: 0px;
+}
+
+.bookCard{
+    flex: 1;
+}
+
+mat-card-content.bookCard{
+    display: flex;
+}
+
+mat-card-content.bookCard div{
+    margin: auto;
+}
