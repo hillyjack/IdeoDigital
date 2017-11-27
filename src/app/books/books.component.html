@@ -1,0 +1,14 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+ <span>My Books</span>
+ <span class="example-spacer"></span>
+ <button mat-button [matMenuTriggerFor]= "appMenu"><mat-icon>menu</mat-icon></button>
+</mat-toolbar-row>
+</mat-toolbar>
+
+<mat-menu #appMenu = "matMenu">
+ <button mat-menu-item>Add New Book</button>
+</mat-menu>
+
+ <app-book></app-book>

@@ -9,11 +9,5 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  myData: Array<any>;
-  
-    constructor(private http: Http) {
-      this.http.get('https://my-json-server.typicode.com/hillyjack/DataBase/BooksDb')
-      .map(response => response.json())
-      .subscribe(res => this.myData = res);
-    }
+  constructor() {}
 }
