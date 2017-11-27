@@ -8,8 +8,7 @@ img{
     width: 200px;
     margin-bottom: 10px;
 }
-
-.booksContainer{
+.bookContainer{
     display: flex;
     padding-bottom: 0px;
 }
@@ -23,6 +22,8 @@ mat-card-content.bookCard{
     display: flex;
 }
 
+
 mat-card-content.bookCard div{
     margin: auto 0 ;
 }
+

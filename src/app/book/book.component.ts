@@ -1,24 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Inject } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { DataService } from '../data.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+import { BooksComponent } from '../books/books.component'
+import { EditBookDialogComponent } from '../edit-book-dialog/edit-book-dialog.component'
 
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css'],
-  providers:[DataService]
+  styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
-  myData: Array<any>;
-  constructor( private dataService: DataService) { }
+  
+  @Input() data: BooksComponent;
 
+  constructor( public dialog: MatDialog ) { }
+
+  openDialog(): void {
+    let dialogRef = this.dialog.open(EditBookDialogComponent, {
+      width: '500px',
+      data: {  }
+    });
+
+    dialogRef.afterClosed().subscribe
+    (result => {console.log('The dialog was closed');
+    });
+  }
   ngOnInit() {
-    this.dataService.fetchData()
-    .subscribe(
-      res => this.myData = res,
-      error => alert(error),
-      () => console.log ("Finished")
-    );
   }
 
   convertDate(bookDate){
