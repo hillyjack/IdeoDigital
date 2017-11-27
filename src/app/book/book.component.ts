@@ -1,9 +1,10 @@
 import { Component, Input, OnInit, Inject } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-import { BooksComponent } from '../books/books.component'
-import { EditBookDialogComponent } from '../edit-book-dialog/edit-book-dialog.component'
+import { MatDialogModule, MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+import { BooksComponent } from '../books/books.component';
+import { EditBookDialogComponent } from '../edit-book-dialog/edit-book-dialog.component';
 
 @Component({
   selector: 'app-book',
@@ -16,7 +17,7 @@ export class BookComponent implements OnInit {
 
   constructor( public dialog: MatDialog ) { }
 
-  openDialog(): void {
+  openEditDialog(): void {
     let dialogRef = this.dialog.open(EditBookDialogComponent, {
       width: '500px',
       data: {  }
@@ -32,7 +33,6 @@ export class BookComponent implements OnInit {
   convertDate(bookDate){
     let dateArray=bookDate.split("-");
     let newDate = dateArray[2] + "," + dateArray[1] + "," + dateArray[0];
-    
     return newDate;
   }
 

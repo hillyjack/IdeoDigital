@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatCardModule, MatToolbarModule } from '@angular/material';
+import {MatButtonModule, MatIconModule, MatMenuModule, MatCardModule, MatToolbarModule } from '@angular/material';
 
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 import { DataService } from './data.service';
 import { HttpModule } from '@angular/http';
@@ -28,15 +28,13 @@ import { EditBookDialogComponent } from './edit-book-dialog/edit-book-dialog.com
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule, 
-    MatCheckboxModule,
     MatIconModule,
     MatMenuModule,
     MatCardModule,
     MatToolbarModule,
+    MatDialogModule,
     HttpModule,
     CommonModule,
-    MatDialog,
-    MatDialogRef    
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
