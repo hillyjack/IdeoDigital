@@ -19,6 +19,7 @@ import { BooksComponent } from './books/books.component';
 
 import { CommonModule } from '@angular/common';
 import { EditBookDialogComponent } from './edit-book-dialog/edit-book-dialog.component';
+import { AlertMessageComponent } from './alert-message/alert-message.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { EditBookDialogComponent } from './edit-book-dialog/edit-book-dialog.com
     AppComponent,
     BookComponent,
     BooksComponent,
-    EditBookDialogComponent
+    EditBookDialogComponent,
+    AlertMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,7 @@ import { EditBookDialogComponent } from './edit-book-dialog/edit-book-dialog.com
     MatNativeDateModule,
     MatInputModule
   ],
-  entryComponents: [EditBookDialogComponent],
+  entryComponents: [EditBookDialogComponent, AlertMessageComponent],
   providers: [DataService],
   bootstrap: [AppComponent]
 })

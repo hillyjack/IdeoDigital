@@ -1,4 +1,4 @@
-
+<span *ngIf="!isDeleted" >
  <mat-card class="bookContainer">
     <div class="bookCard">
     <img src= "{{ data.ImgUrl }}">
@@ -11,8 +11,9 @@
     
           <mat-card-actions>
             <button mat-raised-button (click)="openEditDialog(this.data)">Edit<mat-icon>edit</mat-icon></button>
-            <button mat-button>Delete<mat-icon>delete</mat-icon></button>
+            <button mat-raised-button (click)="deleteBook(this.data)">Delete<mat-icon>delete</mat-icon></button>
           </mat-card-actions>
        </div>
       </mat-card-content>
 </mat-card>
+</span>
