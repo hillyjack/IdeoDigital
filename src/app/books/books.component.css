@@ -1,6 +1,9 @@
 
 
 .example-spacer{
-    flex: 1 1 auto;
+    flex: 1 1 auto;    
 }
 
+mat-toolbar-row {
+font-family: 'Roboto Condensed', sans-serif !important;    
+}

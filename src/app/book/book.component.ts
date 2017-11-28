@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, Inject } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
-import { MatDialogModule, MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 import { BooksComponent } from '../books/books.component';
 import { EditBookDialogComponent } from '../edit-book-dialog/edit-book-dialog.component';
@@ -17,11 +17,12 @@ export class BookComponent implements OnInit {
 
   constructor( public dialog: MatDialog ) { }
 
-  openEditDialog(): void {
+  openEditDialog(bookData): void {
     let dialogRef = this.dialog.open(EditBookDialogComponent, {
-      width: '500px',
-      data: {  }
-    });
+      width: '800px',
+      height: '550px',
+      data: {  bImgUrl: bookData.ImgUrl, bTitle: bookData.Title, bAuthor : bookData.Author, bDate: bookData.Date }
+   });
 
     dialogRef.afterClosed().subscribe
     (result => {console.log('The dialog was closed');

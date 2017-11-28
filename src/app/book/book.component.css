@@ -15,6 +15,7 @@ img{
 
 .bookCard{
     flex: 2;
+    font-family: 'Roboto Condensed', sans-serif !important;    
 }
 
 mat-card-content.bookCard{

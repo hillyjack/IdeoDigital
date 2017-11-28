@@ -10,7 +10,7 @@
           <mat-card-subtitle>Publishing Date: {{ convertDate(data.Date) |date }}</mat-card-subtitle>
     
           <mat-card-actions>
-            <button mat-raised-button (click)="openEditDialog()">Edit<mat-icon>edit</mat-icon></button>
+            <button mat-raised-button (click)="openEditDialog(this.data)">Edit<mat-icon>edit</mat-icon></button>
             <button mat-button>Delete<mat-icon>delete</mat-icon></button>
           </mat-card-actions>
        </div>

@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconModule, MatMenuModule, MatCardModule, MatToolbarModule } from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+import {MatInputModule} from '@angular/material';
 
 import {MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
@@ -35,7 +39,12 @@ import { EditBookDialogComponent } from './edit-book-dialog/edit-book-dialog.com
     MatDialogModule,
     HttpModule,
     CommonModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
+  entryComponents: [EditBookDialogComponent],
   providers: [DataService],
   bootstrap: [AppComponent]
 })

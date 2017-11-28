@@ -1,3 +1,33 @@
-<p>
-  edit-book-dialog works!
-</p>
+
+<h2 mat-dialog-title>Edit Book</h2>
+
+<div class="dialog-container">
+
+<div class="bookCard">
+    <img src= "{{ data.bImgUrl }}">
+</div>
+
+<mat-dialog-content>
+    <p>Book's Title: </p>
+    <mat-form-field>
+      <input matInput placeholder="{{data.bTitle}}">
+    </mat-form-field>
+
+    <p>Book's Author: </p>
+    <mat-form-field>
+      <input matInput placeholder="{{data.bAuthor}}">
+    </mat-form-field>
+    <br/>
+    <p>Publishing Dates: </p>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="{{data.bDate}}">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  
+</mat-dialog-content> 
+</div>
+<mat-dialog-actions> 
+    <button mat-button> Save </button>
+    <button mat-button mat-dialog-close> Cancel </button>
+ </mat-dialog-actions>
